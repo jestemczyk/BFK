@@ -1,12 +1,12 @@
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
 import { NavButton } from "../components/NavButton";
 
 export const MainLayout = () => {
+  const currentPage = useLocation().pathname;
   return (
     <>
       <header className="border-b border-[var(--border-color)] bg-[var(--bg-secondary)] px-6 py-4">
         <div className="mx-auto max-w-8xl">
-          {/* Верхні радок: лагатып + слоган */}
           <div className="mb-4 flex items-end justify-between cursor-pointer">
             <div className="flex flex-col items-start gap-1">
               <span className="text-4xl font-bold tracking-tight text-[var(--text-primary)]">
@@ -19,16 +19,22 @@ export const MainLayout = () => {
             </div>
           </div>
 
-          {/* Ніжні радок: навігацыя + кнопка ўваходу */}
           <div className="flex items-center justify-between text-">
             <nav className="flex gap-1">
-              <NavButton name="Галоўная" page="MainPage" />
-              <NavButton name="Карыстальнікі" page="Users" />
-              <NavButton name="Кнігі" page="Books" />
-              <NavButton name="Артыкулы" page="Articles" />
+              <NavButton name="Галоўная" page="/" currentPage={currentPage} />
+              <NavButton
+                name="Карыстальнікі"
+                page="/users"
+                currentPage={currentPage}
+              />
+              <NavButton name="Кнігі" page="/books" currentPage={currentPage} />
+              <NavButton
+                name="Артыкулы"
+                page="/articles"
+                currentPage={currentPage}
+              />
             </nav>
 
-            {/* Кнопка Увайсьці */}
             <button
               className="
                 group relative rounded-md border border-[var(--accent-red)]/30 px-4 py-1.5 text-sm font-medium
@@ -44,6 +50,7 @@ export const MainLayout = () => {
         </div>
       </header>
       <Outlet />
+      <footer></footer>
     </>
   );
 };
