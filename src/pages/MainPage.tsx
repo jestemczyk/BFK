@@ -39,7 +39,7 @@ export const MainPage = () => {
                 sm:w-auto sm:px-8
               "
             >
-              Чытаць кнігі
+              Чытаць крытыку
             </Link>
 
             <Link
