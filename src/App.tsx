@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router";
 import { MainLayout } from "./pages/MainLayout";
 import { MainPage } from "./pages/MainPage";
+import { PrivateLayout } from "./components/PrivateLayout";
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Route path="/users/:userId/articles/:articleId" />
         <Route path="/books" />
         <Route path="/articles" />
+        <Route element={<PrivateLayout />}>
+          <Route path="/profile" />
+        </Route>
       </Route>
     </Routes>
   );
