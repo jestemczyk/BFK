@@ -1,5 +1,6 @@
 import { Link } from "react-router";
 import { InfoBlock } from "../components/InfoBlock";
+import { BookOpen, PenTool, FileText, Globe } from "lucide-react";
 
 export const MainPage = () => {
   return (
@@ -9,7 +10,7 @@ export const MainPage = () => {
           <div className="mb-4 flex items-center justify-center gap-2 sm:mb-6">
             <span className="h-px w-8 bg-[var(--accent-red)] sm:w-12" />
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-[var(--accent-red)]">
-              Філязофія безь межаў
+              Філязофія бязь межаў
             </span>
             <span className="h-px w-8 bg-[var(--accent-red)] sm:w-12" />
           </div>
@@ -69,22 +70,26 @@ export const MainPage = () => {
       <section className="mx-auto max-w-6xl border-t border-[var(--border-color)] pt-8 sm:pt-12 lg:pt-16">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <InfoBlock
+            icon={BookOpen}
             title="Кнігі ад карыстальнікаў"
             text="Кожны можа дадаць любую філязофскую кнігу. Стварай бібліятэку
               разам!"
           />
 
           <InfoBlock
+            icon={PenTool}
             title="Допісы і крытыка"
             text="Пішы рэцэнзіі, разважай над прачытаным, спрачайся і шукай праўду.
 "
           />
           <InfoBlock
+            icon={FileText}
             title="Уласныя артыкулы"
             text="Дзяліся сваімі думкамі, эсэ і філязофскімі адкрыцьцямі з усімі.
 "
           />
           <InfoBlock
+            icon={Globe}
             title="Прастора безь межаў"
             text="Бяз цэнзуры, без абмежаваньняў. Толькі свабодная думка і пошук
               праўды.
@@ -107,7 +112,7 @@ export const MainPage = () => {
 
         <div className="mt-8 text-center sm:mt-10">
           <p className="mb-3 text-sm text-[var(--text-secondary)]">
-            Усё чытальнае — бясплатна. Але каб дадаваць і пісаць — ствары
+            Усё чытальнае — бязкаштоўна. Але каб дадаваць і пісаць — ствары
             акаўнт.
           </p>
           <Link
