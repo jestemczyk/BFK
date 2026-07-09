@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import { MainLayout } from "./pages/MainLayout";
 import { MainPage } from "./pages/MainPage";
 import { PrivateLayout } from "./components/PrivateLayout";
+import { Profile } from "./pages/Profile";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/books" />
         <Route path="/articles" />
         <Route element={<PrivateLayout />}>
-          <Route path="/profile" />
+          <Route path="/profile" element={<Profile />} />
         </Route>
       </Route>
     </Routes>
