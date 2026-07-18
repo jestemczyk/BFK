@@ -34,7 +34,8 @@ export const MainLayout = () => {
               />
             </nav>
 
-            <button
+            <Link
+              to="/profile"
               className="
                 cursor-pointer
                 w-full whitespace-nowrap rounded-md border border-[var(--accent-red)]/30 px-4 py-1.5 text-sm font-medium
@@ -44,8 +45,8 @@ export const MainLayout = () => {
                 sm:w-auto
               "
             >
-              Увайсьці
-            </button>
+              Профіль
+            </Link>
           </div>
         </div>
       </header>
