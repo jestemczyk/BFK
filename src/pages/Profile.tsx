@@ -121,7 +121,7 @@ export const Profile = () => {
             </div>
           </div>
 
-          <div className="mt-5.5 grid grid-cols-3 gap-3">
+          <div className="mt-[18px] grid grid-cols-3 gap-3">
             <ProfileCounter name="Кнігі" count={user.booksCount} />
             <ProfileCounter name="Допісы" count={user.postsCount} />
             <ProfileCounter name="Артыкулы" count={user.articlesCount} />

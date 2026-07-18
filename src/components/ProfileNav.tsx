@@ -11,7 +11,7 @@ export const ProfileNav = (props: {
   return (
     <Link
       to={props.route}
-      className="group block cursor-pointer rounded-lg border border-[var(--border-color)] bg-[var(--bg-secondary)] p-8 transition-all hover:border-[var(--accent-red)]/30 hover:shadow-card"
+      className="group block cursor-pointer rounded-lg border border-[var(--border-color)] bg-[var(--bg-secondary)] py-8 px-4 lg:p-8 transition-all hover:border-[var(--accent-red)]/30 hover:shadow-card"
     >
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
